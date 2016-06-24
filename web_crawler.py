@@ -110,12 +110,13 @@ def spider(url, maxPages=200, outfile='output.txt'):
                 visitedLinks = visitedLinks + [url]
                 pagesToVisit = pagesToVisit + [page for page in links if page not in visitedLinks]
                 pagesToVisit = pagesToVisit + links
-            except:
+            except Exception as e:
+                print e
                 print(" **Failed to save data!**")
     output.close()
     print "Finished saved %s urls" % numberVisited
 
-spider("http://www.japan-guide.com/", 10, 'output.txt')
+
 
 
 if __name__ == '__main__':
