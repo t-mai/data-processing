@@ -1,4 +1,5 @@
 venv/
 *.pyc
 .DS_Store
-.bz2
+*.bz2
+*.txt
